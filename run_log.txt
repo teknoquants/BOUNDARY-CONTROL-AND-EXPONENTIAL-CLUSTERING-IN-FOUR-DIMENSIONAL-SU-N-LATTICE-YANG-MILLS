@@ -1,0 +1,56 @@
+=== validate_part1_freezing.py
+  [PASS] character series reproduces e^{2 beta cos theta} at t = 0 (common factor)  (factor 1.000000)
+  [PASS] t = 0.05: -log P_t e^W (both links) differs from frozen-boundary V_t^(B,eta)  (min |difference| 2.926e-02)
+  [PASS] t = 0.3: -log P_t e^W (both links) differs from frozen-boundary V_t^(B,eta)  (min |difference| 3.053e-02)
+  [PASS] Hessian of the smoothed potential along e differs (antipode, t = 0.3)  (global 1.1036, frozen 1.8029)
+  -> Part 1 (freezing vs smoothing): 4/4 checks passed
+
+=== validate_part2_onelink.py
+  [PASS] N beta ReTr(UA) = 2 beta_eff cos theta(US), beta_eff = 2 beta |a|, S in SU(2)  (max err 1.6e-15)
+  [PASS] all exterior links = identity: |a| = 6, beta_eff = 12 beta (factor 12 attained)  (random max |a| = 4.378)
+  [PASS] 2 Hess Q(x): radial (1-x^2)Q_xx - xQ_x, tangential -xQ_x (twice)  (max err 3.8e-08)
+  [PASS] Q_x >= 0 along the flow (beta_eff in {0.1,0.5,1.2,3}, 4 heat times)
+  [PASS] Q_xx <= 0 along the flow
+  [PASS] radial and tangential maxima both equal Q_x(t,-1): full-link constant = radial constant  (max excess 0.0e+00)
+  [PASS] C_kappa,loop(beta_eff) increasing on the tested grid [numerical]  (0:1, 0.06:1.073, 0.12:1.156, 0.1668:1.229, 0.24:1.36, 0.5:2.078, 1:6.552, 2:221.9)
+     beta = 0.00500: necessary bound K C_kappa >= C_kappa,loop(12 beta) = 1.07306
+     beta = 0.01000: necessary bound K C_kappa >= C_kappa,loop(12 beta) = 1.15617
+     beta = 0.01390: necessary bound K C_kappa >= C_kappa,loop(12 beta) = 1.22921
+     beta = 0.02000: necessary bound K C_kappa >= C_kappa,loop(12 beta) = 1.36032
+  -> Part 2 (one link): 7/7 checks passed
+
+=== validate_part4_gauge.py
+  [PASS] single link, both ends frozen: dim H_B = 3 (every direction horizontal)
+  [PASS] single link, full gauge group: horizontal dimension 0
+  [PASS] three-link path: D_U injective on interior xi, dim H_B = 9 - 6 = 3  (rank 6)
+  [PASS] interior gauge transformation leaves the path product unchanged
+  [PASS] released endpoint transformation changes the path product
+  [PASS] path product restricted to H_B has full rank 3 (endpoint-frame degrees of freedom survive)
+  -> Part 4 (boundary gauge fixing): 6/6 checks passed
+
+=== validate_part5_decay.py
+  [PASS] 4D, L = 3: every link lies in 6 plaquettes
+  [PASS] every link has 18 neighbours, each sharing exactly one plaquette
+  [PASS] |mixed Hessian of ReTr U_p| <= 1 for unit link directions (SU(2), SU(3))  (max 0.997)
+  [PASS] |diagonal Hessian of ReTr U_p| <= 1 for unit link directions  (max 0.978)
+  [PASS] weighted row sums <= 6 + 18 e^alpha (units of N beta) for weights e^{alpha d(., A)}
+  [PASS] s = alpha d/(J_alpha + 1/C) equalises both exponents at m_alpha = alpha/(1 + C J_alpha)  (max err 1.8e-14)
+  [PASS] Gaussian ring: |Cov(x_0, x_d)| <= [1/J_alpha + sqrt(Var Var)] e^{-m_alpha d}, d = 1..29  (max ratio 0.446)
+     SU(2) explicit rate m_1 = 1/(1 + C N beta (6 + 18 e)) at C = 1, beta = 0.01: 0.4765
+  -> Part 5 (decay estimate): 7/7 checks passed
+
+=== validate_part6_7.py
+  [PASS] (B-1) with constants (delta, H) gives C^{B,eta} <= e^{2H}/delta (200 random signed profiles)  (max C delta e^(-2H) = 0.999)
+  [PASS] Haar: E X = 0, E X^2 = 1/4  (1.0000000000, 0.0e+00, 0.2500000000)
+  [PASS] eps = 0.2: density normalised, positive (|X_p X_q| <= 1), Cov = eps/16 at every separation  (Cov 0.012500)
+  [PASS] eps = 0.9: density normalised, positive (|X_p X_q| <= 1), Cov = eps/16 at every separation  (Cov 0.056250)
+  [PASS] Monte Carlo (Haar quaternions, reweighted): Cov = 0.9/16 within 4 standard errors  (0.05597 vs 0.05625)
+  -> Parts 6-7 (reduction and control): 5/5 checks passed
+
+=== Summary
+  PASS  validate_part1_freezing.py  (0 s)
+  PASS  validate_part2_onelink.py  (47 s)
+  PASS  validate_part4_gauge.py  (0 s)
+  PASS  validate_part5_decay.py  (1 s)
+  PASS  validate_part6_7.py  (1 s)
+ALL CHECKS PASSED
