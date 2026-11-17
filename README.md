@@ -5,8 +5,8 @@ Validation suite for the white paper
 **Boundary Control and Exponential Clustering in Four-Dimensional SU(N) Lattice Yang–Mills**
 R. Cooperman and A.E. Petrunina V.V., XISOSIS, Vienna, 17 November 2026.
 
-- GitHub: `[GITHUB REPOSITORY URL — PLACEHOLDER]`
-- DOI: `[DOI — PLACEHOLDER]`
+- GitHub: https://github.com/teknoquants/BOUNDARY-CONTROL-AND-EXPONENTIAL-CLUSTERING-IN-FOUR-DIMENSIONAL-SU-N-LATTICE-YANG-MILLS
+- DOI: https://doi.org/10.5281/zenodo.24305335
 - Authors: Roger Cooperman (ORCID 0009-0009-5011-2135), A.E. Petrunina V.V. (ORCID 0009-0002-4595-736X)
 
 ## Run
